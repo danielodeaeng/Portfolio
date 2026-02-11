@@ -406,6 +406,20 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #e2e8f0;
 }
 
+.stat-link {
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.stat-link:hover {
+    transform: translateY(-5px);
+    background: #edf2f7;
+    border-color: #38b2ac;
+    box-shadow: 0 10px 25px rgba(56, 178, 172, 0.2);
+}
+
 .stat h3 {
     font-size: 2rem;
     color: #1a365d;
@@ -433,17 +447,17 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 100%;
     
     /* Professional styling */
-    border-radius: 50%;  /* Circular */
-    border: 4px solid #5eb3d4;  /* Your teal highlight color */
+    border-radius: 50%;
+    border: 4px solid #38b2ac;
     box-shadow: 0 10px 30px rgba(44, 95, 127, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-pic:hover {
-    transform: scale(1.05) translateY(-5px);  /* Pop out and lift up */
+    transform: scale(1.05) translateY(-5px);
     box-shadow: 
-        0 20px 50px rgba(44, 95, 127, 0.4),     /* Main shadow */
-        0 10px 20px rgba(0, 0, 0, 0.15);        /* Background shadow */
+        0 20px 50px rgba(44, 95, 127, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.15);  
 }
 
 /* Skills Section */
@@ -477,6 +491,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(56, 178, 172, 0.2);
+    border-color: #38b2ac;
 }
 
 .skill-category h3 {
@@ -539,14 +560,14 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(44, 95, 127, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 
-        0 20px 50px rgba(44, 95, 127, 0.4),
-        0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(56, 178, 172, 0.2);
+    border-color: #38b2ac;
 }
 
 .project-image {
@@ -819,7 +840,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Education Section */
 .education {
     padding: 6rem 0;
-    background: #ffffff;
+    background: #f7fafc;
 }
 
 .education-content {
@@ -907,10 +928,75 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #e2e8f0;
 }
 
+/* Other Work Experience Section */
+.other-experience {
+    padding: 6rem 0;
+    background: #ffffff;
+}
+
+.other-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .other-experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .other-experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.other-exp-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.other-exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(56, 178, 172, 0.2);
+    border-color: #38b2ac;
+}
+
+.other-exp-icon {
+    font-size: 2.5rem;
+    color: #38b2ac;
+    margin-bottom: 1rem;
+}
+
+.other-exp-card h3 {
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.other-exp-duration {
+    color: #38b2ac;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.other-exp-description {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 /* Contact Section */
 .contact {
     padding: 6rem 0;
-    background: #f7fafc;
+    background: #ffffff;
 }
 
 .contact-content {
@@ -963,6 +1049,17 @@ h1, h2, h3, h4, h5, h6 {
 .contact-method p {
     color: #4a5568;
     margin-bottom: 0;
+}
+
+.contact-link {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #38b2ac;
+    text-decoration: underline;
 }
 
 .contact-form {

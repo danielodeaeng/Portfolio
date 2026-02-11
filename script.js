@@ -627,8 +627,8 @@ window.addEventListener('load', () => {
                 img.classList.toggle('active', i === 0);
             });
             
-            // Switch every 3 seconds
-            interval = setInterval(switchImage, 3000);
+            // Switch every 2 seconds
+            interval = setInterval(switchImage, 2000);
         });
         
         // Stop switching when mouse leaves
@@ -650,7 +650,7 @@ window.addEventListener('load', () => {
     document.addEventListener('DOMContentLoaded', function() {
         var typed = new Typed('#typed', {
             strings: [
-                'Automation &amp; Robotics Engineer',
+                'Automation/Robotics Engineer',
                 'PLC Programmer',
                 'HMI &amp; SCADA Developer ',
                 '3D printing &amp; CAD enthusiest',
