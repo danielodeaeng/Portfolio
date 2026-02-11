@@ -242,24 +242,6 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    const nameSpan = document.querySelector('.hero-title .highlight');
-
-    if (!heroTitle || !nameSpan) return;
-
-    const nameHTML = nameSpan.outerHTML;
-
-    heroTitle.innerHTML = ''; // clear
-
-    typeWriter(heroTitle, "Hi! I'm ", 50);
-
-    setTimeout(() => {
-        heroTitle.innerHTML += nameHTML;
-    }, ("Hi! I'm ".length * 50) + 200);
-});
-
-
 // effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
